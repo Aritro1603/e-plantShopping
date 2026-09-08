@@ -82,7 +82,7 @@ body {
 .landing-page {
   min-height: 100vh;
 
-  background-image: url("/images/nursery-background.jpg");
+  background-image: url("/paradise-nursery/images/nursery-background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
