@@ -115,15 +115,9 @@ function ProductList() {
 
                       <p className="price">₹{plant.price}</p>
 
-                      <button
-                        className="add-btn"
-                        disabled={isInCart(plant.id)}
-                        onClick={() => dispatch(addItem(plant))}
-                      >
-                        {isInCart(plant.id)
-                          ? "Added to Cart"
-                          : "Add to Cart"}
-                      </button>
+                      <button className="add-btn" disabled={isInCart(plant.id)} onClick={() => dispatch(addItem(plant))}>
+                       {isInCart(plant.id) ? "Added to Cart" : "Add to Cart"}
+                     </button>
                     </div>
                   </div>
                 ))}
