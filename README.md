@@ -1,16 +1,60 @@
-# React + Vite
+# e-plantShopping
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+e-plantShopping is a React-based online plant shopping application developed as a final project. The application allows users to browse different types of houseplants, add plants to a shopping cart, manage quantities, remove items, and view the total cost of their selected plants.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Company
 
-## React Compiler
+Paradise Nursery is a houseplant shopping company that provides a wide variety of healthy and affordable indoor plants. Our mission is to make it easy for customers to bring nature, freshness, and beauty into their homes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Landing page with Paradise Nursery company information
+- Get Started button to access the plant collection
+- Plant products organized into categories
+- Multiple houseplants with images, names, and prices
+- Add to Cart functionality
+- Add to Cart button becomes disabled after adding a plant
+- Dynamic shopping cart item count
+- Increase and decrease plant quantities
+- Remove plants from the shopping cart
+- Dynamic total plant count
+- Dynamic total cost calculation
+- Individual item totals
+- Checkout button
+- Continue Shopping functionality
+- Responsive user interface
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- React
+- React Router
+- Redux Toolkit
+- React Redux
+- JavaScript
+- CSS
+- Vite
+- GitHub Pages
+
+## Application Pages
+
+### Home
+
+The landing page introduces Paradise Nursery and provides information about the company. A Get Started button takes users to the plant listing page.
+
+### Plants
+
+The plant listing page displays houseplants organized into different categories. Each plant includes an image, name, price, and Add to Cart button.
+
+### Shopping Cart
+
+The shopping cart displays selected plants, quantities, unit prices, item totals, total number of plants, and total cost. Users can increase or decrease quantities, remove items, continue shopping, or proceed to checkout.
+
+## Redux State Management
+
+Redux Toolkit is used to manage the shopping cart state. The cart stores selected plants and their quantities and updates the total cart information dynamically.
+
+## Deployment
+
+The e-plantShopping application is deployed using GitHub Pages.
