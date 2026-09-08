@@ -102,9 +102,7 @@ function CartItem() {
 
                       <span>{item.quantity}</span>
 
-                      <button
-                        onClick={() => handleIncrease(item)}
-                      >
+                      <button onClick={() => handleIncrease(item)}>
                         +
                       </button>
                     </div>
@@ -140,4 +138,3 @@ function CartItem() {
 }
 
 export default CartItem;
-
