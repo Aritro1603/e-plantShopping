@@ -2,9 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import {
-  increaseQuantity,
-  decreaseQuantity,
-  removeFromCart,
+  updateQuantity,
+  removeItem,
 } from "../redux/CartSlice";
 
 import Navbar from "./Navbar";
@@ -23,6 +22,26 @@ function CartItem() {
     (total, item) => total + item.price * item.quantity,
     0
   );
+
+  const handleIncrease = (item) => {
+    dispatch(
+      updateQuantity({
+        id: item.id,
+        quantity: item.quantity + 1,
+      })
+    );
+  };
+
+  const handleDecrease = (item) => {
+    if (item.quantity > 1) {
+      dispatch(
+        updateQuantity({
+          id: item.id,
+          quantity: item.quantity - 1,
+        })
+      );
+    }
+  };
 
   const handleCheckout = () => {
     alert("Coming Soon!");
@@ -49,7 +68,6 @@ function CartItem() {
           <>
             <div className="cart-summary">
               <h2>Total Plants: {totalQuantity}</h2>
-
               <h2>Total Cost: ₹{totalCost.toFixed(2)}</h2>
             </div>
 
@@ -76,9 +94,8 @@ function CartItem() {
 
                     <div className="quantity-controls">
                       <button
-                        onClick={() =>
-                          dispatch(decreaseQuantity(item.id))
-                        }
+                        onClick={() => handleDecrease(item)}
+                        disabled={item.quantity === 1}
                       >
                         −
                       </button>
@@ -86,9 +103,7 @@ function CartItem() {
                       <span>{item.quantity}</span>
 
                       <button
-                        onClick={() =>
-                          dispatch(increaseQuantity(item.id))
-                        }
+                        onClick={() => handleIncrease(item)}
                       >
                         +
                       </button>
@@ -96,9 +111,7 @@ function CartItem() {
 
                     <button
                       className="delete-btn"
-                      onClick={() =>
-                        dispatch(removeFromCart(item.id))
-                      }
+                      onClick={() => dispatch(removeItem(item.id))}
                     >
                       Delete
                     </button>
@@ -127,3 +140,4 @@ function CartItem() {
 }
 
 export default CartItem;
+
