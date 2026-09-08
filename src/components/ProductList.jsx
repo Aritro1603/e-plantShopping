@@ -8,63 +8,63 @@ const plants = [
     name: "Snake Plant",
     price: 299,
     category: "Air Purifying Plants",
-    image: "/images/snake-plant.jpg",
+    image: `${import.meta.env.BASE_URL}images/snake-plant.jpg`,
   },
   {
     id: 2,
     name: "Peace Lily",
     price: 349,
     category: "Air Purifying Plants",
-    image: "/images/peace-lily.jpg",
+    image: `${import.meta.env.BASE_URL}images/peace-lily.jpg`,
   },
   {
     id: 3,
     name: "Spider Plant",
     price: 249,
     category: "Air Purifying Plants",
-    image: "/images/spider-plant.jpg",
+    image: `${import.meta.env.BASE_URL}images/spider-plant.jpg`,
   },
   {
     id: 4,
     name: "Monstera",
     price: 599,
     category: "Tropical Plants",
-    image: "/images/monstera.jpg",
+    image: `${import.meta.env.BASE_URL}images/monstera.jpg`,
   },
   {
     id: 5,
     name: "Pothos",
     price: 399,
     category: "Tropical Plants",
-    image: "/images/pothos.jpg",
+    image: `${import.meta.env.BASE_URL}images/pothos.jpg`,
   },
   {
     id: 6,
     name: "Rubber Plant",
     price: 499,
     category: "Tropical Plants",
-    image: "/images/rubber-plant.jpg",
+    image: `${import.meta.env.BASE_URL}images/rubber-plant.jpg`,
   },
   {
     id: 7,
     name: "Aloe Vera",
     price: 299,
     category: "Succulent Plants",
-    image: "/images/aloe-vera.jpg",
+    image: `${import.meta.env.BASE_URL}images/aloe-vera.jpg`,
   },
   {
     id: 8,
     name: "Jade Plant",
     price: 279,
     category: "Succulent Plants",
-    image: "/images/jade-plant.jpg",
+    image: `${import.meta.env.BASE_URL}images/jade-plant.jpg`,
   },
   {
     id: 9,
     name: "ZZ Plant",
     price: 449,
     category: "Succulent Plants",
-    image: "/images/zz-plant.jpg",
+    image: `${import.meta.env.BASE_URL}images/zz-plant.jpg`,
   },
 ];
 
@@ -113,9 +113,7 @@ function ProductList() {
                     <div className="product-info">
                       <h3>{plant.name}</h3>
 
-                      <p className="price">
-                        ₹{plant.price}
-                      </p>
+                      <p className="price">₹{plant.price}</p>
 
                       <button
                         className="add-btn"
@@ -133,6 +131,11 @@ function ProductList() {
           </section>
         ))}
       </main>
+    </>
+  );
+}
+
+export default ProductList;
     </>
   );
 }
