@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
-    <div className="about-us-container landing-page">
+   <div className="about-us-container landing-page background-image">
       <div className="landing-overlay">
         <div className="landing-content">
           <h1>Paradise Nursery</h1>
